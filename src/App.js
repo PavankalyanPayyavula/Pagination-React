@@ -50,20 +50,20 @@ export default function App() {
           disabled={currentPage === 1}
           onClick={() => handleClick(currentPage - 1)}
         >
-          prev
+          &lt;
         </button>
         {Array.from({ length: totalPages }, (_, index) => index + 1).map(
           (x) => (
             <button key={x} onClick={() => handleClick(x)}>
               {x}
             </button>
-          )
+          ),
         )}
         <button
           disabled={currentPage === totalPages}
           onClick={() => handleClick(currentPage + 1)}
         >
-          next
+          &gt;
         </button>
       </div>
     </div>
